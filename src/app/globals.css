@@ -24,3 +24,20 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Dynamic background styles */
+.dynamic-background {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  background-image: url('/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(20px);
+  opacity: 0.3;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  will-change: transform, opacity;
+}
+
+/* Scroll animation handled by JS in page.tsx */
